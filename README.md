@@ -1,6 +1,3 @@
-<img width="675" height="757" alt="image" src="https://github.com/user-attachments/assets/cd623190-8fe2-4bdb-b4d5-61251e6e32e8" /># Aolda Homepage (Lite)
-
-
 ---
 ## 폴더 구조 (핵심만)
 
