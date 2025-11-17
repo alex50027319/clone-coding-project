@@ -1,51 +1,7 @@
-# Aolda Homepage (Lite)
+<img width="675" height="757" alt="image" src="https://github.com/user-attachments/assets/cd623190-8fe2-4bdb-b4d5-61251e6e32e8" /># Aolda Homepage (Lite)
 
-초보자도 쉽게 수정·확장할 수 있도록 단순한 구조로 재구성된 Aolda 랜딩 페이지입니다.  
-이 문서는 비개발자 분들도 내용을 이해하고 텍스트/이미지 변경을 바로 할 수 있도록 설명합니다.
 
 ---
-
-## 어떻게 보이나요? (한눈에 보는 흐름)
-
-브라우저가 사이트를 열면 `src/pages/Introduction/index.tsx`가 화면을 조립합니다.
-
-1. **상단 헤더** (`Header`)
-2. **인트로(히어로) 섹션** (`IntroSection`)
-3. **숫자로 보는 섹션** (`NumbersSection`)
-4. **서비스 소개 섹션** (`ServiceInfoSection`)
-5. **파트너 섹션** (`PartnersSection`)
-6. **우리의 가치/약속 섹션** (`ValuesSection`)
-7. **하단 푸터** (`Footer`)
-
-> 각 섹션은 "문구 + 간단한 UI"로 구성된 작은 컴포넌트이며, 서로 독립적으로 수정할 수 있습니다.
-
----
-
-## 실행 방법
-
-### 1. 준비
-- Node.js 18+ 설치
-- pnpm 설치
-
-### 2. 설치
-```bash
-pnpm install
-```
-
-### 3. 개발 서버 실행
-```bash
-pnpm dev
-```
-
-http://localhost:5173 에서 확인
-
-### 4. 배포 빌드
-```bash
-pnpm build
-```
-
----
-
 ## 폴더 구조 (핵심만)
 
 ```
@@ -77,6 +33,18 @@ src/
       QuickLinksPanel/ # QuickLinkCard 묶음 패널
       ValueIcon/       # 불편함/약속 아이콘(SVG)
 ```
+
+---
+
+메인 홈페이지-> `src/pages/Introduction/index.tsx`
+
+1. **상단 헤더** (`Header`)
+2. **인트로(히어로) 섹션** (`IntroSection`)
+3. **숫자로 보는 섹션** (`NumbersSection`)
+4. **서비스 소개 섹션** (`ServiceInfoSection`)
+5. **파트너 섹션** (`PartnersSection`)
+6. **우리의 가치/약속 섹션** (`ValuesSection`)
+7. **하단 푸터** (`Footer`)
 
 ---
 
@@ -140,21 +108,3 @@ src/
 
 ---
 
-## 자주 하는 질문
-
-### Q. 버튼 모양을 바꾸고 싶어요.
-**A.** 파란색 큰 버튼은 `IconButton`, 테두리 버튼은 `ActionButton`입니다. 각각의 `style.ts`에서 padding/색상/둥근 정도를 바꿀 수 있습니다.
-
-### Q. 섹션 순서를 바꾸고 싶어요.
-**A.** `src/pages/Introduction/index.tsx`의 `sections` 배열에서 원하는 순서를 재배치하세요.
-
-### Q. 이미지가 잘려요.
-**A.** 인트로/푸터는 화면 너비 전체를 쓰도록 되어 있습니다. 이미지 자체 크기를 조절하거나 컨테이너의 padding 값을 줄여주세요.
-
----
-
-## 문의
-
-- **이메일**: hello@aolda.in
-- **문서**: [https://docs.aoldacloud.com](https://docs.aoldacloud.com)
-- **콘솔**: [https://console.aoldacloud.com/](https://console.aoldacloud.com/)
