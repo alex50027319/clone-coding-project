@@ -1,11 +1,11 @@
-# 🏠 Aolda Homepage (Lite)
+# Aolda Homepage (Lite)
 
 초보자도 쉽게 수정·확장할 수 있도록 단순한 구조로 재구성된 Aolda 랜딩 페이지입니다.  
 이 문서는 비개발자 분들도 내용을 이해하고 텍스트/이미지 변경을 바로 할 수 있도록 설명합니다.
 
 ---
 
-## 📋 어떻게 보이나요? (한눈에 보는 흐름)
+## 어떻게 보이나요? (한눈에 보는 흐름)
 
 브라우저가 사이트를 열면 `src/pages/Introduction/index.tsx`가 화면을 조립합니다.
 
@@ -21,7 +21,7 @@
 
 ---
 
-## 🚀 실행 방법
+## 실행 방법
 
 ### 1. 준비
 - Node.js 18+ 설치
@@ -36,7 +36,8 @@ pnpm install
 ```bash
 pnpm dev
 ```
-→ http://localhost:5173 에서 확인
+
+http://localhost:5173 에서 확인
 
 ### 4. 배포 빌드
 ```bash
@@ -45,7 +46,7 @@ pnpm build
 
 ---
 
-## 📁 폴더 구조 (핵심만)
+## 폴더 구조 (핵심만)
 
 ```
 src/
@@ -79,30 +80,30 @@ src/
 
 ---
 
-## 🧩 각 컴포넌트가 하는 일 (비개발 설명)
+## 각 컴포넌트가 하는 일 (비개발 설명)
 
-### `Header` (상단바)
+### Header (상단바)
 - 왼쪽에 로고, 가운데 메뉴(텍스트), 오른쪽 "콘솔로 이동" 파란 버튼이 있습니다.
 - 메뉴 버튼은 현재 페이지 내에서 이동하는 용도의 라벨(시각적)입니다.
 
-### `IntroSection`
+### IntroSection
 - **왼쪽**: 인트로 이미지를 크게 보여줍니다(`/public/day1.png`).
 - **오른쪽**: 2개의 "퀵 링크 카드"(QuickLinksPanel)로 사용 설명/블로그 등 외부로 이동할 수 있습니다.
 - 퀵링크 문구/URL은 `IntroSection/index.tsx` 상단 `quickLinks` 배열에서 변경합니다.
 
-### `NumbersSection`
+### NumbersSection
 - "숫자로 보는 아올다" 카드를 3개 보여줍니다.
 - 카드의 숫자/설명은 `NumbersSection/index.tsx` 상단의 `defaultStats`에서 바꿉니다.
 
-### `ServiceInfoSection`
+### ServiceInfoSection
 - 서비스의 한 줄 요약을 보여주는 간단한 소개 블록입니다.
 - 문구는 해당 컴포넌트 파일의 `SectionTitle`에 직접 적혀 있습니다.
 
-### `PartnersSection`
+### PartnersSection
 - 파트너(협력 단체) 이름을 나열합니다.
 - 목록은 `partners` 배열에서 수정합니다.
 
-### `ValuesSection`
+### ValuesSection
 - **위쪽**: "불편함 3가지" (파란 포인트 색)
 - **아래쪽**: "약속 3가지" (빨간 포인트 색)
 - 타이틀 일부만 색상을 다르게 강조하고, 각 항목은 카드 3개로 표시합니다.
@@ -111,14 +112,14 @@ src/
 - 문구: `inconveniences`, `promises` 배열의 `title`, `description`
 - 아이콘: `iconType`에 `free | instances | members | ban | account | wrench` 중 하나를 지정
 
-### `Footer`
+### Footer
 - **왼쪽**: 흰색 로고 이미지 `Logo_white.svg` + "Aolda" 텍스트, 그 아래 태그라인
 - **오른쪽**: 주소 + 링크(이메일 안내/콘솔 안내/문서 안내)
 - 로고 이미지는 `/public/Logo_white.svg`이며 크기는 20px로 맞춤
 
 ---
 
-## ✏️ 텍스트/이미지 바꾸는 법
+## 텍스트/이미지 바꾸는 법
 
 | 항목 | 수정 위치 |
 |------|----------|
@@ -131,7 +132,7 @@ src/
 
 ---
 
-## 🛠️ 기술 스택
+## 기술 스택
 
 - **React** + **TypeScript**
 - **styled-components** (섹션/버튼/타이포 등 스타일링)
@@ -139,7 +140,7 @@ src/
 
 ---
 
-## ❓ 자주 하는 질문
+## 자주 하는 질문
 
 ### Q. 버튼 모양을 바꾸고 싶어요.
 **A.** 파란색 큰 버튼은 `IconButton`, 테두리 버튼은 `ActionButton`입니다. 각각의 `style.ts`에서 padding/색상/둥근 정도를 바꿀 수 있습니다.
@@ -152,7 +153,7 @@ src/
 
 ---
 
-## 📞 문의
+## 문의
 
 - **이메일**: hello@aolda.in
 - **문서**: [https://docs.aoldacloud.com](https://docs.aoldacloud.com)
