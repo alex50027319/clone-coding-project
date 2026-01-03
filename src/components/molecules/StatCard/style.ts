@@ -20,3 +20,4 @@ export const StatLabel = styled.span`
   color: ${({ theme }) => theme.colors.text};
 `;
 
+

@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import styled from 'styled-components';
 import Header from '../../components/organisms/Header';
 import Footer from '../../components/organisms/Footer';
-import FAQHeroSection from '../../components/organisms/FAQHeroSection';
+import HeroSection from '../../components/organisms/HeroSection';
 import FAQList from '../../components/organisms/FAQList';
 import type { AccordionProps } from '../../components/molecules/Accordion';
 import * as S from './style';
@@ -189,7 +189,12 @@ const FAQPage = () => {
       <Page>
         <Header />
         <MainContent>
-          <FAQHeroSection
+          <HeroSection
+            variant="dark"
+            title="아올다 FAQ"
+            breadcrumbItems={[{ label: '홈', href: '/' }, { label: 'FAQ' }]}
+            showSearch
+            searchPlaceholder="FAQ를 검색해 보세요."
             searchTerm={searchTerm}
             onSearchChange={setSearchTerm}
             onSearch={handleSearch}

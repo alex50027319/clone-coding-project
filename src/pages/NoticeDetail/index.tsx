@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../../components/organisms/Header';
 import Footer from '../../components/organisms/Footer';
-import NoticeHeroSection from '../../components/organisms/NoticeHeroSection';
+import HeroSection from '../../components/organisms/HeroSection';
 import NoticeDetailContent from '../../components/organisms/NoticeDetailContent';
 import Breadcrumb from '../../components/molecules/Breadcrumb';
 import type { NoticeDetailData } from '../../components/organisms/NoticeDetailContent';
@@ -127,11 +127,9 @@ const NoticeDetailPage = () => {
       <Page>
         <Header />
         <MainContent>
-          <NoticeHeroSection
+          <HeroSection
+            variant="light"
             title="아올다에서 공지사항을 확인해 보세요"
-            searchTerm=""
-            onSearchChange={() => {}}
-            onSearch={() => {}}
           />
           <S.ContentSection>
             <Breadcrumb items={[{ label: '공지사항', href: '/notice' }]} />

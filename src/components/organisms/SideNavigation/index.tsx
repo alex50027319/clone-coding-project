@@ -7,7 +7,7 @@ export interface SideNavigationProps {
   /** 선택된 카테고리 ID 목록 */
   selectedCategories?: string[];
   /** 카테고리 선택 변경 핸들러 */
-  onCategoryChange?: (selectedIds: string[]) => void;
+  onCategoryChange?: (selectedIds: string | string[]) => void;
 }
 
 /**
@@ -39,6 +39,14 @@ const SideNavigation = ({
   selectedCategories = [],
   onCategoryChange,
 }: SideNavigationProps) => {
+  const handleChange = (selectedIds: string | string[]) => {
+    if (onCategoryChange) {
+      // checkbox 모드에서는 항상 string[]이 전달됨
+      const ids = Array.isArray(selectedIds) ? selectedIds : [selectedIds];
+      onCategoryChange(ids);
+    }
+  };
+
   return (
     <S.Sidebar>
       <S.SidebarTitle>제품 카테고리</S.SidebarTitle>
@@ -46,7 +54,7 @@ const SideNavigation = ({
         mode="checkbox"
         items={categories}
         selectedIds={selectedCategories}
-        onChange={onCategoryChange}
+        onChange={handleChange}
       />
     </S.Sidebar>
   );

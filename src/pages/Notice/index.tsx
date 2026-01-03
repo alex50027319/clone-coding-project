@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import styled from 'styled-components';
 import Header from '../../components/organisms/Header';
 import Footer from '../../components/organisms/Footer';
-import NoticeHeroSection from '../../components/organisms/NoticeHeroSection';
+import HeroSection from '../../components/organisms/HeroSection';
 import NoticeList from '../../components/organisms/NoticeList';
 import type { NoticeItemProps } from '../../components/molecules/NoticeItem';
 import * as S from './style';
@@ -135,8 +135,11 @@ const NoticePage = () => {
       <Page>
         <Header />
         <MainContent>
-          <NoticeHeroSection
+          <HeroSection
+            variant="light"
             title="아올다에서 공지사항을 확인해 보세요"
+            showSearch
+            searchPlaceholder="공지사항을 검색해 보세요"
             searchTerm={searchTerm}
             onSearchChange={setSearchTerm}
             onSearch={handleSearch}
